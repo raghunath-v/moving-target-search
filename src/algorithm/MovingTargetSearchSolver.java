@@ -22,7 +22,12 @@ public interface MovingTargetSearchSolver {
      * simulates a move by the target and calculates the new best path. Call initialize() before calling this
      * method
      * @param newTarget the new position of the target
+     * @param startPosition the current position of the searcher
      * @return the list of edges that form the best path to the target at the new position
      */
-    List<Edge> moveTarget(Node newTarget);
+    List<Node> moveTarget(Node newTarget, Node startPosition) throws NoPathFoundException;
+
+    class NoPathFoundException extends Exception {
+
+    }
 }
