@@ -1,5 +1,7 @@
 package graph;
 
+import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -8,16 +10,22 @@ import java.util.Set;
 public class Graph {
     private Set<Node> nodes;
     private Set<Edge> edges;
-    private Node root; //TODO: define other starting nodes
+    private Map<Node, Map<Node, Double>> heuristic;
 
     public Graph() {
-
+        nodes = new HashSet<>();
+        edges = new HashSet<>();
     }
 
-    public Graph(Set<Node> nodes, Set<Edge> edges, Node root) {
+    public Graph(Set<Node> nodes, Map<Node, Map<Node, Double>> heuristic) {
+        this.nodes = nodes;
+        this.heuristic = heuristic;
+        edges = new HashSet<>();
+    }
+
+    public Graph(Set<Node> nodes, Set<Edge> edges) {
         this.nodes = nodes;
         this.edges = edges;
-        this.root = root;
     }
 
     public void addNode(Node node) {
@@ -36,7 +44,11 @@ public class Graph {
         return edges;
     }
 
-    public Node getRoot() {
-        return root;
+    public Map<Node, Map<Node, Double>> getHeuristic() {
+        return heuristic;
+    }
+
+    public void setHeuristic(Map<Node, Map<Node, Double>> heuristic) {
+        this.heuristic = heuristic;
     }
 }
