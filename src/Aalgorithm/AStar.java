@@ -1,5 +1,6 @@
 package Aalgorithm;
 
+import MTDalgorithm.Logger;
 import graph.Edge;
 import graph.Graph;
 import graph.Node;
@@ -26,11 +27,6 @@ public class AStar implements SearchSolver {
         this.targetPosition = targetStart;
         this.startPosition = searchStart;
 
-        //set heuristics
-        for (Node n : graph.getNodes()) {
-            n.setH(graph.getHeuristic().get(n).get(targetPosition));
-        }
-
         openList = new PriorityQueue<>(new Comparator<Node>() {
             @Override
             public int compare(Node o1, Node o2) {
@@ -42,10 +38,23 @@ public class AStar implements SearchSolver {
             }
         });
         openList.add(startPosition);
+        initializeNodes();
+        startPosition.setG(0);
+    }
+
+    private void initializeNodes() {
+        for (Node node : graph.getNodes()) {
+            node.setG(INFINITY);
+            node.setParent(null);
+            node.setF(INFINITY);
+            node.setH(graph.getHeuristic().get(node).get(targetPosition));
+        }
     }
 
     @Override
     public List<Node> getPath() throws NoPathFoundException {
+        computeCostMinimalPath();
+
         Stack<Node> stack = new Stack<>();
         Node current = targetPosition;
         stack.push(current);
@@ -68,17 +77,20 @@ public class AStar implements SearchSolver {
     private void computeCostMinimalPath() {
         while (!openList.isEmpty()) {
             Node q = openList.poll();
+            Logger.log("expand " + q);
             for (Edge edge : q.getEdges()) {
                 Node s = edge.getNodeB();
-                s.setParent(q);
+                if (s != startPosition && q.getG() + edge.getWeight() < s.getG()) {
+                    s.setParent(q);
+                    s.setG(q.getG() + edge.getWeight());
+                    s.calculateF();
+                    openList.remove(s);
+                    openList.add(s);
+                }
                 if (s.equals(targetPosition)) {
                     //found the target -> terminate search
                     return;
                 }
-                s.setG(Math.min(q.getG() + edge.getWeight(), s.getG()));
-                s.calculateF();
-                openList.remove(s);
-                openList.add(s);
             }
         }
     }
