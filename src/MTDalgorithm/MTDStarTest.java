@@ -1,4 +1,4 @@
-package algorithm;
+package MTDalgorithm;
 
 import graph.Edge;
 import graph.Graph;

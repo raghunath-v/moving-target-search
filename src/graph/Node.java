@@ -5,13 +5,12 @@ import java.util.Set;
 
 /**
  * basic implementation of a node in a graph with a set of edges.
- * Needs to be comparable as nodes should be stored in a priority queue
  */
-public class Node implements Comparable<Node> {
+public class Node {
 
     private Set<Edge> edges;
 
-    /* variables needed for the algorithm */
+    /* variables needed for the MTDalgorithm */
     private double h; //the heuristic value for this node
     private double g; //an approximation of the cost from the start node to this node
     private double f; //the sum of g and h
@@ -48,6 +47,10 @@ public class Node implements Comparable<Node> {
     public double calculateKey(double k) {
         key = Math.min(g, rhs) + h + k;
         return key;
+    }
+
+    public void calculateF() {
+        f = g + h;
     }
 
     public Set<Edge> getEdges() {
@@ -108,15 +111,6 @@ public class Node implements Comparable<Node> {
 
     public String getId() {
         return id;
-    }
-
-    @Override
-    public int compareTo(Node o) {
-        if (o != null) {
-            return Double.compare(key, o.key);
-        } else {
-            return 1;
-        }
     }
 
     @Override

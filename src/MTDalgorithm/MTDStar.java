@@ -1,4 +1,4 @@
-package algorithm;
+package MTDalgorithm;
 
 import graph.Edge;
 import graph.Graph;
@@ -7,7 +7,7 @@ import graph.Node;
 import java.util.*;
 
 /**
- * implementation of the Moving Target D* algorithm according to this paper:
+ * implementation of the Moving Target D* MTDalgorithm according to this paper:
  * http://idm-lab.org/bib/abstracts/papers/aamas10a.pdf
  */
 public class MTDStar implements MovingTargetSearchSolver{
@@ -36,7 +36,16 @@ public class MTDStar implements MovingTargetSearchSolver{
         initializeNodes();
         currentPosition.setRhs(0);
         k = 0;
-        openList = new PriorityQueue<>();
+        openList = new PriorityQueue<>(new Comparator<Node>() {
+            @Override
+            public int compare(Node o1, Node o2) {
+                if (o1 != null && o2 != null) {
+                    return Double.compare(o1.getKey(), o2.getKey());
+                } else {
+                    return 1;
+                }
+            }
+        });
         closedList = new HashSet<>();
         currentPosition.calculateKey(k);
         openList.add(currentPosition);
