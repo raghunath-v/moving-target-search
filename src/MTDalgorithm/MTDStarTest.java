@@ -1,5 +1,7 @@
-package algorithm;
+package MTDalgorithm;
 
+import Aalgorithm.AStar;
+import Aalgorithm.SearchSolver;
 import graph.Edge;
 import graph.Graph;
 import graph.Node;
@@ -66,20 +68,34 @@ public class MTDStarTest {
         }
         graph.setHeuristic(heuristic);
 
-
-        MovingTargetSearchSolver solver = new MTDStar();
-        solver.initialize(graph, thiefStart, policeStart);
         try {
-            List<Node> path = solver.moveTarget(thiefStart, policeStart);
+            MovingTargetSearchSolver mtsolver = new MTDStar();
+            mtsolver.initialize(graph, thiefStart, policeStart);
+            System.out.println("------ MTD*: -----");
+            List<Node> path = mtsolver.moveTarget(thiefStart, policeStart);
             for (Node s : path) {
                 System.out.println(s);
             }
 
-            path = solver.moveTarget(node6, node4);
+            path = mtsolver.moveTarget(node6, node4);
             for (Node s : path) {
                 System.out.println(s);
             }
-        } catch (MovingTargetSearchSolver.NoPathFoundException e) {
+
+            SearchSolver solver = new AStar();
+            solver.initialize(graph, thiefStart, policeStart);
+            System.out.println("------ A*: -----");
+            path = solver.getPath();
+            for (Node s : path) {
+                System.out.println(s);
+            }
+
+            solver.initialize(graph, node6, node4);
+            path = solver.getPath();
+            for (Node s : path) {
+                System.out.println(s);
+            }
+        } catch (MovingTargetSearchSolver.NoPathFoundException| SearchSolver.NoPathFoundException e) {
             e.printStackTrace();
         }
     }

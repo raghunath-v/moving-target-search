@@ -1,13 +1,12 @@
-package algorithm;
+package MTDalgorithm;
 
-import graph.Edge;
 import graph.Graph;
 import graph.Node;
 
 import java.util.List;
 
 /**
- * interface for a algorithm that solves a moving target planning problem
+ * interface for a MTDalgorithm that solves a moving target planning problem
  */
 public interface MovingTargetSearchSolver {
     /**
@@ -23,7 +22,7 @@ public interface MovingTargetSearchSolver {
      * method
      * @param newTarget the new position of the target
      * @param startPosition the current position of the searcher
-     * @return the list of edges that form the best path to the target at the new position
+     * @return the list of nodes that form the best path to the target at the new position
      */
     List<Node> moveTarget(Node newTarget, Node startPosition) throws NoPathFoundException;
 

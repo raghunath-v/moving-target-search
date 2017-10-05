@@ -51,4 +51,18 @@ public class Graph {
     public void setHeuristic(Map<Node, Map<Node, Double>> heuristic) {
         this.heuristic = heuristic;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("----- Nodes ------").append("\n");
+        for (Node n : getNodes()) {
+            builder.append(n).append(":").append("\n");
+            for (Edge e : n.getEdges()) {
+                builder.append(e.getNodeA()).append(" ---- ").append(e.getWeight()).append(" ----> ").append(e.getNodeB()).append("\n");
+            }
+        }
+
+        return builder.toString();
+    }
 }

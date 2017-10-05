@@ -1,4 +1,4 @@
-package algorithm;
+package MTDalgorithm;
 
 public class Logger {
     public static final boolean LOG_ON = true;
