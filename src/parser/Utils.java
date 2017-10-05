@@ -1,6 +1,12 @@
-import javax.xml.stream.Location;
+package parser;
+
+import graph.Node;
 
 public class Utils {
+
+    public static double computeDistance(Node a, Node b) {
+        return computeDistance(a.getX(), a.getY(), b.getX(), b.getY());
+    }
 
     /**
      * cimputes the distance between two locations given their latitude and longtitude
