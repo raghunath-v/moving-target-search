@@ -1,11 +1,23 @@
 package skeleton;
+import graph.Node;
 
 public class Police {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("sedgsgw");
-
+    private Node myNode;
+    //private double speed;
+    private Node goalNode;
+    
+	void Police(Node node, Node goalNode) {
+		this.myNode=node;
+		this.goalNode=goalNode;		
 	}
-
+	
+	public Node currPosition()
+	{
+		return myNode;
+	}
+	public void updateGoalState(Node newNode)
+	{
+		this.goalState=newNode;
+	}	
 }

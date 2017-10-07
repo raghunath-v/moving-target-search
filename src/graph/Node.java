@@ -112,6 +112,20 @@ public class Node {
     public String getId() {
         return id;
     }
+    
+    public boolean isSame(Node compareNode)
+    {
+    	boolean flag=true;
+    	if (this.getX()!=compareNode.getX()) 
+    	{
+    		flag=false;
+    	}
+    	if (this.getX()!=compareNode.getY()) 
+    	{
+    		flag=false;
+    	}
+    	return flag;
+    }
 
     @Override
     public String toString() {
