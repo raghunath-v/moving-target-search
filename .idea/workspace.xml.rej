@@ -1,0 +1,38 @@
+diff a/.idea/workspace.xml b/.idea/workspace.xml	(rejected hunks)
+@@ -28,34 +28,8 @@
+             <state relative-caret-position="511">
+               <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+               <folding>
+-                <element signature="e#630#631#0" expanded="true" />
+-                <element signature="e#664#665#0" expanded="true" />
+-                <element signature="e#705#706#0" expanded="true" />
+-                <element signature="e#739#740#0" expanded="true" />
+-                <element signature="e#780#781#0" expanded="true" />
+-                <element signature="e#814#815#0" expanded="true" />
+-                <element signature="e#1044#1045#0" expanded="true" />
+-                <element signature="e#1072#1073#0" expanded="true" />
+-                <element signature="e#1100#1101#0" expanded="true" />
+-                <element signature="e#1124#1125#0" expanded="true" />
+-                <element signature="e#1158#1159#0" expanded="true" />
+-                <element signature="e#1184#1185#0" expanded="true" />
+-                <element signature="e#1212#1213#0" expanded="true" />
+-                <element signature="e#1236#1237#0" expanded="true" />
+-                <element signature="e#1270#1271#0" expanded="true" />
+-                <element signature="e#1296#1297#0" expanded="true" />
+-                <element signature="e#1324#1325#0" expanded="true" />
+-                <element signature="e#1348#1349#0" expanded="true" />
+-                <element signature="e#1382#1383#0" expanded="true" />
+-                <element signature="e#1408#1409#0" expanded="true" />
+-                <element signature="e#1439#1440#0" expanded="true" />
+-                <element signature="e#1468#1469#0" expanded="true" />
+-                <element signature="e#1510#1511#0" expanded="true" />
+-                <element signature="e#1546#1547#0" expanded="true" />
+-                <element signature="e#1576#1577#0" expanded="true" />
+-                <element signature="e#1602#1603#0" expanded="true" />
+-                <element signature="e#1640#1641#0" expanded="true" />
+-                <element signature="e#1670#1671#0" expanded="true" />
++                <element signature="e#1025#1026#0" expanded="true" />
++                <element signature="e#1059#1060#0" expanded="true" />
+               </folding>
+             </state>
+           </provider>
