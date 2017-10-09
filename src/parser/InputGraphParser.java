@@ -40,8 +40,8 @@ public class InputGraphParser {
             for (int i = 0;i<numEdges;i++) {
                 line = br.readLine();
                 split = line.split(" ");
-                int a = Integer.parseInt(split[0]);
-                int b = Integer.parseInt(split[1]);
+                int a = Integer.parseInt(split[0]) - 1; //-1 to get a 1 based nubering
+                int b = Integer.parseInt(split[1]) - 1; //-1 to get a 1 based nubering
                 Node nodeA = nodes.get(a);
                 Node nodeB = nodes.get(b);
                 double dist = Utils.computeDistance(nodeA, nodeB);
