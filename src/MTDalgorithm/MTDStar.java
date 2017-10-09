@@ -3,6 +3,8 @@ package MTDalgorithm;
 import graph.Edge;
 import graph.Graph;
 import graph.Node;
+import main.ExpandCounter;
+import main.NoPathFoundException;
 
 import java.util.*;
 
@@ -23,15 +25,18 @@ public class MTDStar implements MovingTargetSearchSolver{
 
     private double k; //value k_m of the pseudo code
 
+    private ExpandCounter counter;
+
     public MTDStar() {
 
     }
 
     @Override
-    public void initialize(Graph graph, Node targetStart, Node searchStart) {
+    public void initialize(Graph graph, Node targetStart, Node searchStart, ExpandCounter counter) {
         this.graph = graph;
         targetPosition = targetStart;
         currentPosition = searchStart;
+        this.counter = counter;
 
         initializeNodes();
         currentPosition.setRhs(0);
@@ -100,6 +105,7 @@ public class MTDStar implements MovingTargetSearchSolver{
                 openList.add(u);
             } else if (u.getG() > u.getRhs()) {
                 Logger.log("expand node " + u.getId());
+                counter.countNodeExpand();
                 u.setG(u.getRhs());
                 openList.remove(u);
                 closedList.add(u);

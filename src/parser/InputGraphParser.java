@@ -37,16 +37,27 @@ public class InputGraphParser {
             }
 
             //read edges
+            Map<Integer, Set<Integer>> matrix = new HashMap<>();
             for (int i = 0;i<numEdges;i++) {
                 line = br.readLine();
                 split = line.split(" ");
-                int a = Integer.parseInt(split[0]) - 1; //-1 to get a 1 based nubering
-                int b = Integer.parseInt(split[1]) - 1; //-1 to get a 1 based nubering
-                Node nodeA = nodes.get(a);
-                Node nodeB = nodes.get(b);
-                double dist = Utils.computeDistance(nodeA, nodeB);
-                nodeA.addEdge(new Edge(nodeA, nodeB, dist));
-                nodeB.addEdge(new Edge(nodeB, nodeA, dist));
+                int a = Integer.parseInt(split[0]) - 1; //-1 to get a 1 based numbering
+                int b = Integer.parseInt(split[1]) - 1; //-1 to get a 1 based numbering
+                if (!matrix.containsKey(a) || !matrix.get(a).contains(b)) {
+                    Node nodeA = nodes.get(a);
+                    Node nodeB = nodes.get(b);
+                    double dist = Utils.computeDistance(nodeA, nodeB);
+                    nodeA.addEdge(new Edge(nodeA, nodeB, dist));
+                    nodeB.addEdge(new Edge(nodeB, nodeA, dist));
+                    if (!matrix.containsKey(a)) {
+                        matrix.put(a, new HashSet<>());
+                    }
+                    if (!matrix.containsKey(b)) {
+                        matrix.put(b, new HashSet<>());
+                    }
+                    matrix.get(a).add(b);
+                    matrix.get(b).add(a);
+                }
             }
 
             //computing heuristic

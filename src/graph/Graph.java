@@ -57,9 +57,9 @@ public class Graph {
         StringBuilder builder = new StringBuilder();
         builder.append("----- Nodes ------").append("\n");
         for (Node n : getNodes()) {
-            builder.append(n).append(":").append("\n");
+            //builder.append(n).append(":").append("\n");
             for (Edge e : n.getEdges()) {
-                builder.append(e.getNodeA()).append(" ---- ").append(e.getWeight()).append(" ----> ").append(e.getNodeB()).append("\n");
+                builder.append(e.getNodeA()).append(" -> ").append(e.getNodeB()).append(" [ label = ").append(e.getWeight()).append(" ] ;").append("\n");
             }
         }
 

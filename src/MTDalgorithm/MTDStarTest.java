@@ -5,6 +5,8 @@ import Aalgorithm.SearchSolver;
 import graph.Edge;
 import graph.Graph;
 import graph.Node;
+import main.ExpandCounter;
+import main.NoPathFoundException;
 
 import java.util.HashMap;
 import java.util.List;
@@ -70,7 +72,12 @@ public class MTDStarTest {
 
         try {
             MovingTargetSearchSolver mtsolver = new MTDStar();
-            mtsolver.initialize(graph, thiefStart, policeStart);
+            mtsolver.initialize(graph, thiefStart, policeStart, new ExpandCounter() {
+                @Override
+                public void countNodeExpand() {
+
+                }
+            });
             System.out.println("------ MTD*: -----");
             List<Edge> path = mtsolver.moveTarget(thiefStart, policeStart);
             for (Edge s : path) {
@@ -83,19 +90,29 @@ public class MTDStarTest {
             }
 
             SearchSolver solver = new AStar();
-            solver.initialize(graph, thiefStart, policeStart);
+            solver.initialize(graph, thiefStart, policeStart, new ExpandCounter() {
+                @Override
+                public void countNodeExpand() {
+
+                }
+            });
             System.out.println("------ A*: -----");
             path = solver.getPath();
             for (Edge s : path) {
                 System.out.println(s);
             }
 
-            solver.initialize(graph, node6, node4);
+            solver.initialize(graph, node6, node4, new ExpandCounter() {
+                @Override
+                public void countNodeExpand() {
+
+                }
+            });
             path = solver.getPath();
             for (Edge s : path) {
                 System.out.println(s);
             }
-        } catch (MovingTargetSearchSolver.NoPathFoundException| SearchSolver.NoPathFoundException e) {
+        } catch (NoPathFoundException e) {
             e.printStackTrace();
         }
     }

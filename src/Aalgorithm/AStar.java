@@ -4,6 +4,8 @@ import MTDalgorithm.Logger;
 import graph.Edge;
 import graph.Graph;
 import graph.Node;
+import main.ExpandCounter;
+import main.NoPathFoundException;
 
 import java.util.*;
 
@@ -21,11 +23,14 @@ public class AStar implements SearchSolver {
 
     private PriorityQueue<Node> openList; //the nodes that are open for expanding
 
+    private ExpandCounter counter;
+
     @Override
-    public void initialize(Graph graph, Node targetStart, Node searchStart) {
+    public void initialize(Graph graph, Node targetStart, Node searchStart, ExpandCounter counter) {
         this.graph = graph;
         this.targetPosition = targetStart;
         this.startPosition = searchStart;
+        this.counter = counter;
 
         openList = new PriorityQueue<>(new Comparator<Node>() {
             @Override
@@ -78,6 +83,7 @@ public class AStar implements SearchSolver {
         while (!openList.isEmpty()) {
             Node q = openList.poll();
             Logger.log("expand " + q);
+            counter.countNodeExpand();
             for (Edge edge : q.getEdges()) {
                 Node s = edge.getNodeB();
                 if (s != startPosition && q.getG() + edge.getWeight() < s.getG()) {
