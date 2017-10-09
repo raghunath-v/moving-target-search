@@ -25,4 +25,9 @@ public class Edge {
     public double getWeight() {
         return weight;
     }
+
+    @Override
+    public String toString() {
+        return nodeA + " -> " + nodeB;
+    }
 }

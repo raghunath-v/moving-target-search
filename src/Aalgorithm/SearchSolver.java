@@ -1,5 +1,6 @@
 package Aalgorithm;
 
+import graph.Edge;
 import graph.Graph;
 import graph.Node;
 
@@ -17,10 +18,10 @@ public interface SearchSolver {
 
     /**
      * gets the shortest path from search start to target
-     * @return list of nodes that descibe the path
+     * @return list of edges that describe the path
      * @throws NoPathFoundException if there is no path to the target
      */
-    List<Node> getPath() throws NoPathFoundException;
+    List<Edge> getPath() throws NoPathFoundException;
 
     class NoPathFoundException extends Exception {
 

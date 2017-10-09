@@ -15,6 +15,7 @@ public class Node {
     private double g; //an approximation of the cost from the start node to this node
     private double f; //the sum of g and h
     private Node parent; //the parent node in the search tree
+    private Edge edgeToParent; //the edge from the parent to this node
     private double rhs; //one step lookahead g value
     private double key; //the priority key for this node
 
@@ -111,6 +112,14 @@ public class Node {
 
     public String getId() {
         return id;
+    }
+
+    public Edge getEdgeToParent() {
+        return edgeToParent;
+    }
+
+    public void setEdgeToParent(Edge edgeToParent) {
+        this.edgeToParent = edgeToParent;
     }
 
     @Override

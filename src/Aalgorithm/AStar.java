@@ -46,24 +46,24 @@ public class AStar implements SearchSolver {
         for (Node node : graph.getNodes()) {
             node.setG(INFINITY);
             node.setParent(null);
+            node.setEdgeToParent(null);
             node.setF(INFINITY);
             node.setH(graph.getHeuristic().get(node).get(targetPosition));
         }
     }
 
     @Override
-    public List<Node> getPath() throws NoPathFoundException {
+    public List<Edge> getPath() throws NoPathFoundException {
         computeCostMinimalPath();
 
-        Stack<Node> stack = new Stack<>();
+        Stack<Edge> stack = new Stack<>();
         Node current = targetPosition;
-        stack.push(current);
         while (current.getParent() != null) {
+            stack.push(current.getEdgeToParent());
             current = current.getParent();
-            stack.push(current);
         }
 
-        List<Node> list = new ArrayList<>();
+        List<Edge> list = new ArrayList<>();
         while (!stack.empty()) {
             list.add(stack.pop());
         }
@@ -82,6 +82,7 @@ public class AStar implements SearchSolver {
                 Node s = edge.getNodeB();
                 if (s != startPosition && q.getG() + edge.getWeight() < s.getG()) {
                     s.setParent(q);
+                    s.setEdgeToParent(edge);
                     s.setG(q.getG() + edge.getWeight());
                     s.calculateF();
                     openList.remove(s);

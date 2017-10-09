@@ -72,13 +72,13 @@ public class MTDStarTest {
             MovingTargetSearchSolver mtsolver = new MTDStar();
             mtsolver.initialize(graph, thiefStart, policeStart);
             System.out.println("------ MTD*: -----");
-            List<Node> path = mtsolver.moveTarget(thiefStart, policeStart);
-            for (Node s : path) {
+            List<Edge> path = mtsolver.moveTarget(thiefStart, policeStart);
+            for (Edge s : path) {
                 System.out.println(s);
             }
 
             path = mtsolver.moveTarget(node6, node4);
-            for (Node s : path) {
+            for (Edge s : path) {
                 System.out.println(s);
             }
 
@@ -86,13 +86,13 @@ public class MTDStarTest {
             solver.initialize(graph, thiefStart, policeStart);
             System.out.println("------ A*: -----");
             path = solver.getPath();
-            for (Node s : path) {
+            for (Edge s : path) {
                 System.out.println(s);
             }
 
             solver.initialize(graph, node6, node4);
             path = solver.getPath();
-            for (Node s : path) {
+            for (Edge s : path) {
                 System.out.println(s);
             }
         } catch (MovingTargetSearchSolver.NoPathFoundException| SearchSolver.NoPathFoundException e) {
