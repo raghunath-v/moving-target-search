@@ -5,6 +5,8 @@ import Aalgorithm.SearchSolver;
 import graph.Edge;
 import graph.Graph;
 import graph.Node;
+import main.ExpandCounter;
+import main.NoPathFoundException;
 
 import java.util.HashMap;
 import java.util.List;
@@ -17,13 +19,13 @@ public class MTDStarTest {
 
     private static void testMTD() {
         //build test graph
-        Node policeStart = new Node("policeStart", 0, 0);
-        Node thiefStart = new Node("thiefStart", 10, 9);
-        Node node3 = new Node("node3", 0, 5);
-        Node node4 = new Node("node4", 6, 2);
-        Node node5 = new Node("node5", 3, 7);
-        Node node6 = new Node("node6", 1 , 11);
-        Node node7 = new Node("node7", 10, 9);
+        Node policeStart = new Node("policeStart", 0, 0, 1);
+        Node thiefStart = new Node("thiefStart", 10, 9, 2);
+        Node node3 = new Node("node3", 0, 5, 3);
+        Node node4 = new Node("node4", 6, 2, 4);
+        Node node5 = new Node("node5", 3, 7, 5);
+        Node node6 = new Node("node6", 1 , 11, 6);
+        Node node7 = new Node("node7", 10, 9, 7);
 
         policeStart.addEdge(new Edge(policeStart, node3, calcDistance(policeStart, node3)));
         policeStart.addEdge(new Edge(policeStart, node4, calcDistance(policeStart, node4)));
@@ -70,32 +72,47 @@ public class MTDStarTest {
 
         try {
             MovingTargetSearchSolver mtsolver = new MTDStar();
-            mtsolver.initialize(graph, thiefStart, policeStart);
+            mtsolver.initialize(graph, thiefStart, policeStart, new ExpandCounter() {
+                @Override
+                public void countNodeExpand() {
+
+                }
+            });
             System.out.println("------ MTD*: -----");
-            List<Node> path = mtsolver.moveTarget(thiefStart, policeStart);
-            for (Node s : path) {
+            List<Edge> path = mtsolver.moveTarget(thiefStart, policeStart);
+            for (Edge s : path) {
                 System.out.println(s);
             }
 
             path = mtsolver.moveTarget(node6, node4);
-            for (Node s : path) {
+            for (Edge s : path) {
                 System.out.println(s);
             }
 
             SearchSolver solver = new AStar();
-            solver.initialize(graph, thiefStart, policeStart);
+            solver.initialize(graph, thiefStart, policeStart, new ExpandCounter() {
+                @Override
+                public void countNodeExpand() {
+
+                }
+            });
             System.out.println("------ A*: -----");
             path = solver.getPath();
-            for (Node s : path) {
+            for (Edge s : path) {
                 System.out.println(s);
             }
 
-            solver.initialize(graph, node6, node4);
+            solver.initialize(graph, node6, node4, new ExpandCounter() {
+                @Override
+                public void countNodeExpand() {
+
+                }
+            });
             path = solver.getPath();
-            for (Node s : path) {
+            for (Edge s : path) {
                 System.out.println(s);
             }
-        } catch (MovingTargetSearchSolver.NoPathFoundException| SearchSolver.NoPathFoundException e) {
+        } catch (NoPathFoundException e) {
             e.printStackTrace();
         }
     }

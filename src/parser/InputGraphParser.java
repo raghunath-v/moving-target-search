@@ -33,20 +33,31 @@ public class InputGraphParser {
                 split = line.split(" ");
                 double lat = Double.parseDouble(split[0]);
                 double lon = Double.parseDouble(split[1]);
-                nodes.add(new Node(NODE_PREFIX + i, lat, lon));
+                nodes.add(new Node(NODE_PREFIX + (i + 1), lat, lon, i + 1));
             }
 
             //read edges
+            Map<Integer, Set<Integer>> matrix = new HashMap<>();
             for (int i = 0;i<numEdges;i++) {
                 line = br.readLine();
                 split = line.split(" ");
-                int a = Integer.parseInt(split[0]);
-                int b = Integer.parseInt(split[1]);
-                Node nodeA = nodes.get(a);
-                Node nodeB = nodes.get(b);
-                double dist = Utils.computeDistance(nodeA, nodeB);
-                nodeA.addEdge(new Edge(nodeA, nodeB, dist));
-                nodeB.addEdge(new Edge(nodeB, nodeA, dist));
+                int a = Integer.parseInt(split[0]) - 1; //-1 to get a 1 based numbering
+                int b = Integer.parseInt(split[1]) - 1; //-1 to get a 1 based numbering
+                if (!matrix.containsKey(a) || !matrix.get(a).contains(b)) {
+                    Node nodeA = nodes.get(a);
+                    Node nodeB = nodes.get(b);
+                    double dist = Utils.computeDistance(nodeA, nodeB);
+                    nodeA.addEdge(new Edge(nodeA, nodeB, dist));
+                    nodeB.addEdge(new Edge(nodeB, nodeA, dist));
+                    if (!matrix.containsKey(a)) {
+                        matrix.put(a, new HashSet<>());
+                    }
+                    if (!matrix.containsKey(b)) {
+                        matrix.put(b, new HashSet<>());
+                    }
+                    matrix.get(a).add(b);
+                    matrix.get(b).add(a);
+                }
             }
 
             //computing heuristic
@@ -65,9 +76,9 @@ public class InputGraphParser {
             //get special nodes
             line = br.readLine();
             split = line.split(" ");
-            int searchStartIndex = Integer.parseInt(split[0]);
-            int targetStartIndex = Integer.parseInt(split[1]);
-            int targetTargetIndex = Integer.parseInt(split[2]);
+            int searchStartIndex = Integer.parseInt(split[0]) - 1;
+            int targetStartIndex = Integer.parseInt(split[1]) - 1;
+            int targetTargetIndex = Integer.parseInt(split[2]) - 1;
 
             //build problem object
             return new MovingTargetSearchProblem(graph, nodes.get(searchStartIndex), nodes.get(targetStartIndex),

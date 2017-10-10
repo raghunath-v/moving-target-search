@@ -3,6 +3,8 @@ package MTDalgorithm;
 import graph.Edge;
 import graph.Graph;
 import graph.Node;
+import main.ExpandCounter;
+import main.NoPathFoundException;
 
 import java.util.*;
 
@@ -23,15 +25,18 @@ public class MTDStar implements MovingTargetSearchSolver{
 
     private double k; //value k_m of the pseudo code
 
+    private ExpandCounter counter;
+
     public MTDStar() {
 
     }
 
     @Override
-    public void initialize(Graph graph, Node targetStart, Node searchStart) {
+    public void initialize(Graph graph, Node targetStart, Node searchStart, ExpandCounter counter) {
         this.graph = graph;
         targetPosition = targetStart;
         currentPosition = searchStart;
+        this.counter = counter;
 
         initializeNodes();
         currentPosition.setRhs(0);
@@ -61,6 +66,7 @@ public class MTDStar implements MovingTargetSearchSolver{
             node.setRhs(INFINITY);
             node.setG(INFINITY);
             node.setParent(null);
+            node.setEdgeToParent(null);
         }
     }
 
@@ -98,7 +104,8 @@ public class MTDStar implements MovingTargetSearchSolver{
                 openList.remove(u);
                 openList.add(u);
             } else if (u.getG() > u.getRhs()) {
-                Logger.log("expand node " + u.getId());
+                //Logger.log("expand node " + u.getId());
+                counter.countNodeExpand();
                 u.setG(u.getRhs());
                 openList.remove(u);
                 closedList.add(u);
@@ -106,6 +113,7 @@ public class MTDStar implements MovingTargetSearchSolver{
                     Node s = edge.getNodeB();
                     if (s != currentPosition && s.getRhs() > u.getG() + edge.getWeight()) {
                         s.setParent(u);
+                        s.setEdgeToParent(edge);
                         s.setRhs(u.getG() + edge.getWeight());
                         updateState(s);
                     }
@@ -118,18 +126,22 @@ public class MTDStar implements MovingTargetSearchSolver{
                     if (!s.equals(currentPosition) && s.getParent().equals(u)) {
                         double min = INFINITY;
                         Node minNode = null;
+                        Edge minEdge = null;
                         for (Edge preEdge : s.getEdges()) {
                             if (min < preEdge.getNodeB().getG() + preEdge.getWeight()) {
                                 min = preEdge.getNodeB().getG() + preEdge.getWeight();
                                 minNode = preEdge.getNodeB();
+                                minEdge = edge;
                             }
                         }
                         s.setRhs(min);
                         //TODO: check if this really is the same as in pseudo code
                         if (min == INFINITY) {
                             s.setParent(null);
+                            s.setEdgeToParent(null);
                         } else {
                             s.setParent(minNode);
+                            s.setEdgeToParent(minEdge);
                         }
                     }
                     updateState(s);
@@ -143,6 +155,7 @@ public class MTDStar implements MovingTargetSearchSolver{
      */
     private void optimizedDeletion() {
         currentPosition.setParent(null);
+        currentPosition.setEdgeToParent(null);
         Set<Node> deletedList = new HashSet<>();
 
         //calculate set of nodes that are in the search tree but not in the
@@ -156,6 +169,7 @@ public class MTDStar implements MovingTargetSearchSolver{
 
         for (Node s : toDeleteNodes) {
             s.setParent(null);
+            s.setEdgeToParent(null);
             s.setRhs(INFINITY);
             s.setG(INFINITY);
             openList.remove(s); //removes s if it is contained
@@ -168,6 +182,7 @@ public class MTDStar implements MovingTargetSearchSolver{
                 if (s.getRhs() > pred.getG() + edge.getWeight()) {
                     s.setRhs(pred.getG() + edge.getWeight());
                     s.setParent(pred);
+                    s.setEdgeToParent(edge);
                 }
             }
             if (s.getRhs() < INFINITY) {
@@ -189,7 +204,7 @@ public class MTDStar implements MovingTargetSearchSolver{
     }
 
     @Override
-    public List<Node> moveTarget(Node newTarget, Node startPosition) throws NoPathFoundException {
+    public List<Edge> moveTarget(Node newTarget, Node startPosition) throws NoPathFoundException {
         Node oldTarget = targetPosition;
         Node oldStart = currentPosition;
         targetPosition = newTarget;
@@ -214,16 +229,15 @@ public class MTDStar implements MovingTargetSearchSolver{
         return getPath();
     }
 
-    private List<Node> getPath() {
-        Stack<Node> stack = new Stack<>();
+    private List<Edge> getPath() {
+        Stack<Edge> stack = new Stack<>();
         Node current = targetPosition;
-        stack.push(current);
         while (current.getParent() != null) {
+            stack.push(current.getEdgeToParent());
             current = current.getParent();
-            stack.push(current);
         }
 
-        List<Node> list = new ArrayList<>();
+        List<Edge> list = new ArrayList<>();
         while (!stack.empty()) {
             list.add(stack.pop());
         }

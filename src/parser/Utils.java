@@ -2,6 +2,8 @@ package parser;
 
 import graph.Node;
 
+import java.util.Random;
+
 public class Utils {
 
     public static double computeDistance(Node a, Node b) {
@@ -27,5 +29,16 @@ public class Utils {
         double dist = (float) (earthRadius * c);
 
         return dist;
+    }
+
+    /**
+     * returns a value of a normal distribution with the desired mean and standard derivation
+     * @param mean mean value of distribution
+     * @param standardDerivation standard derivation of distribution
+     * @return
+     */
+    public static double normalValue(double mean, double standardDerivation) {
+        Random random = new Random();
+        return random.nextGaussian() * standardDerivation + mean;
     }
 }

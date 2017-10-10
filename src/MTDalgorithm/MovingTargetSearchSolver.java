@@ -1,7 +1,10 @@
 package MTDalgorithm;
 
+import graph.Edge;
 import graph.Graph;
 import graph.Node;
+import main.ExpandCounter;
+import main.NoPathFoundException;
 
 import java.util.List;
 
@@ -14,19 +17,16 @@ public interface MovingTargetSearchSolver {
      * @param graph the graph of the map where the search takes place
      * @param targetStart the start position for the target (in our case the thief)
      * @param searchStart the start position for the searcher (in our case the police)
+     * @param counter the counter object that counts the expanded nodes
      */
-    void initialize(Graph graph, Node targetStart, Node searchStart);
+    void initialize(Graph graph, Node targetStart, Node searchStart, ExpandCounter counter);
 
     /**
      * simulates a move by the target and calculates the new best path. Call initialize() before calling this
      * method
      * @param newTarget the new position of the target
      * @param startPosition the current position of the searcher
-     * @return the list of nodes that form the best path to the target at the new position
+     * @return the list of edges that form the best path to the target at the new position
      */
-    List<Node> moveTarget(Node newTarget, Node startPosition) throws NoPathFoundException;
-
-    class NoPathFoundException extends Exception {
-
-    }
+    List<Edge> moveTarget(Node newTarget, Node startPosition) throws NoPathFoundException;
 }
