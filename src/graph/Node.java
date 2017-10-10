@@ -20,17 +20,19 @@ public class Node {
     private double key; //the priority key for this node
 
     private String id; //string representation for this node
+    private int index; //index of node in graph
 
     //TODO: change to lat/long (x, y for test purpose)
     private double x;
     private double y;
 
 
-    public Node(String id, double x, double y) {
+    public Node(String id, double x, double y, int index) {
         edges = new HashSet<>();
         this.id = id;
         this.x = x;
         this.y = y;
+        this.index = index;
     }
 
     public void addEdge(Edge newEdge) {
@@ -120,6 +122,14 @@ public class Node {
 
     public void setEdgeToParent(Edge edgeToParent) {
         this.edgeToParent = edgeToParent;
+    }
+
+    public int getIndex() {
+        return index;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
     }
 
     @Override

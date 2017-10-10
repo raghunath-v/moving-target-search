@@ -33,7 +33,7 @@ public class InputGraphParser {
                 split = line.split(" ");
                 double lat = Double.parseDouble(split[0]);
                 double lon = Double.parseDouble(split[1]);
-                nodes.add(new Node(NODE_PREFIX + (i + 1), lat, lon));
+                nodes.add(new Node(NODE_PREFIX + (i + 1), lat, lon, i + 1));
             }
 
             //read edges

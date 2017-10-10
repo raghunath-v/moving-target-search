@@ -1,0 +1,29 @@
+P 12  //start node of Police
+T 7  //start node of Thief
+TT 25  //target node of Thief
+6  //length of thief path
+7  //first node in thief path
+24  //second node in thief path
+6  //etc
+17  //..
+21  //..
+25  //..
+t 7  //thief is at node 7
+p 12  //police is at node 12
+pp 6  //new police path with length 6 nodes
+12  //first node of police path
+20  //second node of police path
+21  //etc.
+17  //..
+6  //..
+24  //..
+t 24  //thief is at node 24
+t 6  //..
+t 17  //..
+t 21  //..
+p 20  //..
+pp 2  //new police path with length 2 nodes
+20  //..
+25  //..
+p 25  //police is at node 25
+ca 25 //catch at node 25 ('cb 21 25' would mean catch between node 21 and node 25, 'e' means escaped)
