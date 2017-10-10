@@ -11,6 +11,7 @@ import graph.Graph;
 import graph.Node;
 import parser.InputGraphParser;
 import parser.MovingTargetSearchProblem;
+import parser.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +24,9 @@ public class Main {
 
     private static final int MTD_STAR = 1;
     private static final int MULTI_A_STAR = 2;
+    private static final double POLICE_TRAFFIC_MEAN = 0.7;
+    private static final double THIEF_TRAFFIC_MEAN = 1.5;
+    private static final double STANDARD_DERIVATION = 0.3;
 
     private static int policeExpandCounter;
     private static int thiefExpandCounter;
@@ -50,6 +54,7 @@ public class Main {
         int policeTime = 0; // time until the police is at the next node
         boolean catched = false; // indicates if the police is on the same node as the thief
         Node thiefNext = null; // the node towards which the thief is heading
+        Node policeLast = null; // the node where the police comes from
         Node policeTarget = null; //the node towards the police drives right now
         List<Edge> policePath = new ArrayList<>(); // the path for the police
         int policePathPosition = 0;
@@ -112,9 +117,18 @@ public class Main {
                     thiefPosition = thiefPath.get(thiefPathPosition).getNodeA();
                     thiefRealPath.add(thiefPosition);
                     thiefNext = thiefPath.get(thiefPathPosition).getNodeB();
-                    thiefTime = (int) thiefPath.get(thiefPathPosition).getWeight();
+                    //simulate traffic
+                    double traffic = Utils.normalValue(THIEF_TRAFFIC_MEAN, STANDARD_DERIVATION);
+                    Logger.log("thief traffic: " + traffic);
+                    thiefTime = (int) (thiefPath.get(thiefPathPosition).getWeight() * traffic);
                     thiefPathPosition++;
                     Logger.log("thief is between " + thiefPosition + " and " + thiefNext + " (" + thiefTime + ")");
+                }
+
+                if (thiefNext != null && thiefNext.equals(policeLast) && policePosition.equals(thiefPosition)) {
+                    // terminate loop
+                    catched = true;
+                    continue;
                 }
             }
             if (policeTime == 0) {
@@ -134,8 +148,12 @@ public class Main {
                     } else {
                         policePathPosition++;
                     }
+                    policeLast = policePosition;
                     policePosition = policePath.get(policePathPosition).getNodeB();
-                    policeTime = (int) policePath.get(policePathPosition).getWeight();
+                    //simulate traffic
+                    double traffic = Utils.normalValue(POLICE_TRAFFIC_MEAN, STANDARD_DERIVATION);
+                    Logger.log("police traffic: " + traffic);
+                    policeTime = (int) (policePath.get(policePathPosition).getWeight() * traffic);
                     Logger.log("police drives to " + policePosition + " (" + policeTime + ")");
                 } catch (NoPathFoundException e) {
                     throw new Error("no path");

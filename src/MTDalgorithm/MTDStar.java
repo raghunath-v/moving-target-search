@@ -104,7 +104,7 @@ public class MTDStar implements MovingTargetSearchSolver{
                 openList.remove(u);
                 openList.add(u);
             } else if (u.getG() > u.getRhs()) {
-                Logger.log("expand node " + u.getId());
+                //Logger.log("expand node " + u.getId());
                 counter.countNodeExpand();
                 u.setG(u.getRhs());
                 openList.remove(u);

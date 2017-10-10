@@ -82,7 +82,7 @@ public class AStar implements SearchSolver {
     private void computeCostMinimalPath() {
         while (!openList.isEmpty()) {
             Node q = openList.poll();
-            Logger.log("expand " + q);
+            //Logger.log("expand " + q);
             counter.countNodeExpand();
             for (Edge edge : q.getEdges()) {
                 Node s = edge.getNodeB();

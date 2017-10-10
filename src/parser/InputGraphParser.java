@@ -33,7 +33,7 @@ public class InputGraphParser {
                 split = line.split(" ");
                 double lat = Double.parseDouble(split[0]);
                 double lon = Double.parseDouble(split[1]);
-                nodes.add(new Node(NODE_PREFIX + i, lat, lon));
+                nodes.add(new Node(NODE_PREFIX + (i + 1), lat, lon));
             }
 
             //read edges
@@ -76,9 +76,9 @@ public class InputGraphParser {
             //get special nodes
             line = br.readLine();
             split = line.split(" ");
-            int searchStartIndex = Integer.parseInt(split[0]);
-            int targetStartIndex = Integer.parseInt(split[1]);
-            int targetTargetIndex = Integer.parseInt(split[2]);
+            int searchStartIndex = Integer.parseInt(split[0]) - 1;
+            int targetStartIndex = Integer.parseInt(split[1]) - 1;
+            int targetTargetIndex = Integer.parseInt(split[2]) - 1;
 
             //build problem object
             return new MovingTargetSearchProblem(graph, nodes.get(searchStartIndex), nodes.get(targetStartIndex),
