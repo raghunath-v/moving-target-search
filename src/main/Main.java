@@ -199,24 +199,27 @@ public class Main {
             thiefTime--;
         }
 
-        if (thiefNext == thiefTarget) {
+        //log catch result
+        if (catched) {
+            Logger.log("thief got catched");
+        } else if (thiefNext == thiefTarget) {
             output.addLine("e");
             Logger.log("thief escaped");
         }
-        if (catched) {
-            Logger.log("thief got catched");
-        }
 
+        //log actual thief path
         Logger.log("---- thief nodes: -----");
         for (Node n : thiefRealPath) {
             Logger.log(n.toString());
         }
 
+        //log actual police path
         Logger.log("---- police nodes: -----");
         for (Node n : policeRealPath) {
             Logger.log(n.toString());
         }
 
+        //log the number of expanded nodes
         Logger.log("thief expanded " + thiefExpandCounter + " nodes");
         Logger.log("police expanded " + policeExpandCounter + " nodes");
 

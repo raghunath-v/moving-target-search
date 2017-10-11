@@ -12,7 +12,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MTDStarTest {
+/**
+ * class that tests A* and MTD* implementation
+ */
+public class SearchAlgorithmTest {
     public static void main(String[] args) {
         testMTD();
     }
@@ -118,10 +121,10 @@ public class MTDStarTest {
     }
 
     private static double calcDistance(Node a, Node b) {
-        double x1 = a.getX();
-        double y1 = a.getY();
-        double x2 = b.getX();
-        double y2 = b.getY();
+        double x1 = a.getLat();
+        double y1 = a.getLongt();
+        double x2 = b.getLat();
+        double y2 = b.getLongt();
         return Math.sqrt(Math.pow(Math.abs(x1 - x2), 2) + Math.pow(Math.abs(y1 - y2), 2));
     }
 }

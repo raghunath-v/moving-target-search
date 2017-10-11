@@ -6,7 +6,7 @@ package graph;
 public class Edge {
     private Node nodeA;
     private Node nodeB;
-    private double weight; //TODO: adjust for probability distribution
+    private double weight;
 
     public Edge(Node nodeA, Node nodeB, double weight) {
         this.nodeA  = nodeA;

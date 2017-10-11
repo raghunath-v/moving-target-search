@@ -16,16 +16,16 @@ public class MTDStar implements MovingTargetSearchSolver{
 
     private static final double INFINITY = Double.MAX_VALUE;
 
-    private Graph graph;
-    private Node targetPosition;
-    private Node currentPosition;
+    private Graph graph; //the graph on which the algorithm runs
+    private Node targetPosition; //the current goal node of the search
+    private Node currentPosition; //the current start node of the search
 
     private PriorityQueue<Node> openList; //the nodes that are open for expanding
     private Set<Node> closedList; //the nodes that have been expanded
 
     private double k; //value k_m of the pseudo code
 
-    private ExpandCounter counter;
+    private ExpandCounter counter; //the counter that counts the expanded nodes for this node
 
     public MTDStar() {
 
@@ -45,6 +45,7 @@ public class MTDStar implements MovingTargetSearchSolver{
             @Override
             public int compare(Node o1, Node o2) {
                 if (o1 != null && o2 != null) {
+                    //compare nodes according to their keys
                     return Double.compare(o1.getKey(), o2.getKey());
                 } else {
                     return 1;
@@ -53,7 +54,7 @@ public class MTDStar implements MovingTargetSearchSolver{
         });
         closedList = new HashSet<>();
         currentPosition.calculateKey(k);
-        openList.add(currentPosition);
+        openList.add(currentPosition); //start node should be open for expanding
 
         //set heuristics
         for (Node n : graph.getNodes()) {
@@ -61,6 +62,9 @@ public class MTDStar implements MovingTargetSearchSolver{
         }
     }
 
+    /**
+     * initializes all values of a node according to the MTD* algorithm
+     */
     private void initializeNodes() {
         for (Node node : graph.getNodes()) {
             node.setRhs(INFINITY);
@@ -135,7 +139,6 @@ public class MTDStar implements MovingTargetSearchSolver{
                             }
                         }
                         s.setRhs(min);
-                        //TODO: check if this really is the same as in pseudo code
                         if (min == INFINITY) {
                             s.setParent(null);
                             s.setEdgeToParent(null);
@@ -154,8 +157,10 @@ public class MTDStar implements MovingTargetSearchSolver{
      * adjusts search tree to new start node
      */
     private void optimizedDeletion() {
+        //reset parent pointers of new start node
         currentPosition.setParent(null);
         currentPosition.setEdgeToParent(null);
+
         Set<Node> deletedList = new HashSet<>();
 
         //calculate set of nodes that are in the search tree but not in the
@@ -167,6 +172,7 @@ public class MTDStar implements MovingTargetSearchSolver{
         toDeleteNodes.addAll(closedList);
         toDeleteNodes.removeAll(subTreeNodes);
 
+        //reset all nodes in the previously calculated set
         for (Node s : toDeleteNodes) {
             s.setParent(null);
             s.setEdgeToParent(null);
@@ -192,6 +198,11 @@ public class MTDStar implements MovingTargetSearchSolver{
         }
     }
 
+    /**
+     * calculates the set of nodes that are in the subtree routed at the given root
+     * @param subTreeRoot the root of the subtree
+     * @param subTreeNodes the set in which the result is stored
+     */
     private void getSubtreeNodes(Node subTreeRoot, Set<Node> subTreeNodes) {
         subTreeNodes.add(subTreeRoot);
         for (Edge edge : subTreeRoot.getEdges()) {
@@ -205,11 +216,13 @@ public class MTDStar implements MovingTargetSearchSolver{
 
     @Override
     public List<Edge> moveTarget(Node newTarget, Node startPosition) throws NoPathFoundException {
+        //adjust pointers to nodes
         Node oldTarget = targetPosition;
         Node oldStart = currentPosition;
         targetPosition = newTarget;
         currentPosition = startPosition;
-        k += oldTarget.getH();
+
+        k += oldTarget.getH(); //calculate new k
         if (!currentPosition.equals(oldStart)) {
             optimizedDeletion();
         }
@@ -218,8 +231,6 @@ public class MTDStar implements MovingTargetSearchSolver{
         for (Node n : graph.getNodes()) {
             n.setH(graph.getHeuristic().get(n).get(targetPosition));
         }
-
-        //TODO: implement changing edge weights
 
         computeCostMinimalPath();
         if (currentPosition.getRhs() == INFINITY) {
@@ -230,17 +241,20 @@ public class MTDStar implements MovingTargetSearchSolver{
     }
 
     private List<Edge> getPath() {
-        Stack<Edge> stack = new Stack<>();
+        //collect edges in stack according to parent edge pointers
+        Stack<Edge> stack = new Stack<>(); //use stack to easily reverse the order
         Node current = targetPosition;
         while (current.getParent() != null) {
             stack.push(current.getEdgeToParent());
             current = current.getParent();
         }
 
+        //reverse the order to get the path from start to target (stack is from target to start)
         List<Edge> list = new ArrayList<>();
         while (!stack.empty()) {
             list.add(stack.pop());
         }
+
         return list;
     }
 }

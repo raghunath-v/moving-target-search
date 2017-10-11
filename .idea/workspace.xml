@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba2b983f-4367-43d6-a110-fbae0e384a8a" name="Default" comment="" />
+    <list default="true" id="ba2b983f-4367-43d6-a110-fbae0e384a8a" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/skeleton/Police.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/skeleton/Thief.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/MTDalgorithm/MTDStarTest.java" afterPath="$PROJECT_DIR$/src/MTDalgorithm/SearchAlgorithmTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/Aalgorithm/AStar$1.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/Aalgorithm/AStar$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/Aalgorithm/AStar.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/Aalgorithm/AStar.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/Aalgorithm/SearchSolver.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/Aalgorithm/SearchSolver.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/MTDalgorithm/Logger.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/MTDalgorithm/Logger.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/MTDalgorithm/MTDStar$1.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/MTDalgorithm/MTDStar$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/MTDalgorithm/MTDStar.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/MTDalgorithm/MTDStar.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/MTDalgorithm/MTDStarTest.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/MTDalgorithm/MTDStarTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/MTDalgorithm/MovingTargetSearchSolver.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/MTDalgorithm/MovingTargetSearchSolver.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/graph/Edge.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/graph/Edge.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/graph/Graph.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/graph/Graph.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/graph/Node.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/graph/Node.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/parser/InputGraphParser.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/parser/InputGraphParser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/parser/MovingTargetSearchProblem.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/parser/MovingTargetSearchProblem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/parser/ParserTest.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/parser/ParserTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/parser/Utils.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/parser/Utils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Aalgorithm/AStar.java" afterPath="$PROJECT_DIR$/src/Aalgorithm/AStar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Aalgorithm/SearchSolver.java" afterPath="$PROJECT_DIR$/src/Aalgorithm/SearchSolver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MTDalgorithm/Logger.java" afterPath="$PROJECT_DIR$/src/MTDalgorithm/Logger.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MTDalgorithm/MTDStar.java" afterPath="$PROJECT_DIR$/src/MTDalgorithm/MTDStar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/graph/Edge.java" afterPath="$PROJECT_DIR$/src/graph/Edge.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/graph/Graph.java" afterPath="$PROJECT_DIR$/src/graph/Graph.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/graph/Node.java" afterPath="$PROJECT_DIR$/src/graph/Node.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/ExpandCounter.java" afterPath="$PROJECT_DIR$/src/main/ExpandCounter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Main.java" afterPath="$PROJECT_DIR$/src/main/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/InputGraphParser.java" afterPath="$PROJECT_DIR$/src/parser/InputGraphParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/MovingTargetSearchProblem.java" afterPath="$PROJECT_DIR$/src/parser/MovingTargetSearchProblem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/ParserTest.java" afterPath="$PROJECT_DIR$/src/parser/ParserTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/Utils.java" afterPath="$PROJECT_DIR$/src/parser/Utils.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -11,43 +46,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Graph.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/graph/Graph.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/graph/Node.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-              <folding>
-                <element signature="e#1025#1026#0" expanded="true" />
-                <element signature="e#1059#1060#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Edge.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/graph/Edge.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-              <folding>
-                <element signature="e#496#497#0" expanded="true" />
-                <element signature="e#524#525#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
       <file leaf-file-name="test_graph.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parser/test_graph.txt">
           <provider selected="true" editor-type-id="text-editor">
@@ -58,25 +57,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AStar.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Aalgorithm/AStar.java">
+      <file leaf-file-name="stockholm_graph.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/parser/stockholm_graph.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-147">
-              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="3025">
+              <caret line="121" column="7" lean-forward="false" selection-start-line="121" selection-start-column="7" selection-end-line="121" selection-end-column="7" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GamePlay.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/GamePlay.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#44#45#0" expanded="true" />
-                <element signature="e#89#90#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -92,6 +78,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -102,13 +89,24 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/graph/Graph.java" />
-        <option value="$PROJECT_DIR$/src/graph/Edge.java" />
         <option value="$PROJECT_DIR$/src/algorithm/MovingTargetSearchSolver.java" />
-        <option value="$PROJECT_DIR$/src/graph/Node.java" />
         <option value="$PROJECT_DIR$/src/algorithm/MTDStar.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/GamePlay.java" />
+        <option value="$PROJECT_DIR$/src/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/Aalgorithm/AStar.java" />
+        <option value="$PROJECT_DIR$/src/Aalgorithm/SearchSolver.java" />
+        <option value="$PROJECT_DIR$/src/graph/Edge.java" />
+        <option value="$PROJECT_DIR$/src/graph/Graph.java" />
+        <option value="$PROJECT_DIR$/src/graph/Node.java" />
+        <option value="$PROJECT_DIR$/src/main/ExpandCounter.java" />
+        <option value="$PROJECT_DIR$/src/MTDalgorithm/Logger.java" />
+        <option value="$PROJECT_DIR$/src/MTDalgorithm/MTDStar.java" />
+        <option value="$PROJECT_DIR$/src/MTDalgorithm/MTDStarTest.java" />
+        <option value="$PROJECT_DIR$/src/MTDalgorithm/SearchAlgorithmTest.java" />
+        <option value="$PROJECT_DIR$/src/parser/InputGraphParser.java" />
+        <option value="$PROJECT_DIR$/src/parser/MovingTargetSearchProblem.java" />
+        <option value="$PROJECT_DIR$/src/parser/ParserTest.java" />
       </list>
     </option>
   </component>
@@ -131,10 +129,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -147,10 +141,44 @@
               <item name="moving-target-search" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="moving-target-search" type="b2602c69:ProjectViewProjectNode" />
+              <item name="moving-target-search" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Aalgorithm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="moving-target-search" type="b2602c69:ProjectViewProjectNode" />
+              <item name="moving-target-search" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="moving-target-search" type="b2602c69:ProjectViewProjectNode" />
+              <item name="moving-target-search" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="moving-target-search" type="b2602c69:ProjectViewProjectNode" />
+              <item name="moving-target-search" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="MTDalgorithm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="moving-target-search" type="b2602c69:ProjectViewProjectNode" />
+              <item name="moving-target-search" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -172,7 +200,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.SearchAlgorithmTest">
+    <configuration name="SearchAlgorithmTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="MTDalgorithm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="MTDalgorithm.SearchAlgorithmTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Moving Target Search" />
+      <envs />
+    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -254,6 +301,11 @@
       <properties />
       <listeners />
     </configuration>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.SearchAlgorithmTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -269,34 +321,56 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-11" y="-11" width="1942" height="1046" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284091" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19772728" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -307,6 +381,98 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Aalgorithm/AStar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="84" column="14" lean-forward="false" selection-start-line="84" selection-start-column="14" selection-end-line="84" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/nio/file/Files.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="3391" column="23" lean-forward="false" selection-start-line="3391" selection-start-column="23" selection-end-line="3391" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/nio/file/StandardOpenOption.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graph/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="59" column="57" lean-forward="true" selection-start-line="59" selection-start-column="57" selection-end-line="59" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parser/OutputFileWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="22" column="58" lean-forward="true" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#801#802#0" expanded="false" />
+            <element signature="e#835#836#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_1507663068093">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_1507663314487">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graph/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="126" column="27" lean-forward="false" selection-start-line="126" selection-start-column="27" selection-end-line="126" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_1507663602494">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_1507664959087">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample_output">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/graph/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -319,10 +485,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
           <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-          <folding>
-            <element signature="e#1025#1026#0" expanded="true" />
-            <element signature="e#1059#1060#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -331,8 +494,8 @@
         <state relative-caret-position="378">
           <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
           <folding>
-            <element signature="e#496#497#0" expanded="true" />
-            <element signature="e#524#525#0" expanded="true" />
+            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -350,12 +513,9 @@
     <entry file="file://$PROJECT_DIR$/src/algorithm/MTDStar.java" />
     <entry file="file://$PROJECT_DIR$/src/graph/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-          <folding>
-            <element signature="e#1025#1026#0" expanded="true" />
-            <element signature="e#1059#1060#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1171">
+          <caret line="123" column="9" lean-forward="false" selection-start-line="123" selection-start-column="9" selection-end-line="123" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -364,8 +524,8 @@
         <state relative-caret-position="399">
           <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
           <folding>
-            <element signature="e#496#497#0" expanded="true" />
-            <element signature="e#524#525#0" expanded="true" />
+            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -394,14 +554,200 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GamePlay.java">
+    <entry file="file://$PROJECT_DIR$/src/GamePlay.java" />
+    <entry file="file://$PROJECT_DIR$/src/graph/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graph/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graph/Edge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
           <folding>
-            <element signature="e#44#45#0" expanded="true" />
-            <element signature="e#89#90#0" expanded="true" />
+            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithm/MovingTargetSearchSolver.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/PriorityQueue.java" />
+    <entry file="file://$PROJECT_DIR$/src/algorithm/MTDStar.java" />
+    <entry file="file://$PROJECT_DIR$/src/GamePlay.java" />
+    <entry file="file://$PROJECT_DIR$/src/Aalgorithm/SearchSolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MTDalgorithm/MovingTargetSearchSolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graph/Edge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="8" selection-end-column="26" />
+          <folding>
+            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graph/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="12" column="87" lean-forward="false" selection-start-line="12" selection-start-column="87" selection-end-line="12" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graph/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1975">
+          <caret line="116" column="5" lean-forward="false" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/ExpandCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="68" lean-forward="false" selection-start-line="3" selection-start-column="68" selection-end-line="3" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/NoPathFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="51" lean-forward="false" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5175">
+          <caret line="226" column="29" lean-forward="true" selection-start-line="226" selection-start-column="29" selection-end-line="226" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MTDalgorithm/Logger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MTDalgorithm/MTDStar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6250">
+          <caret line="256" column="8" lean-forward="false" selection-start-line="256" selection-start-column="8" selection-end-line="256" selection-end-column="8" />
+          <folding>
+            <marker date="1507710844393" expanded="true" signature="8957:9091" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Aalgorithm/AStar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="75" column="96" lean-forward="true" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="15" lean-forward="false" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MTDalgorithm/SearchAlgorithmTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="15" column="46" lean-forward="false" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parser/getMap.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parser/InputGraphParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1638">
+          <caret line="10" column="57" lean-forward="false" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parser/MovingTargetSearchProblem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="6" column="96" lean-forward="false" selection-start-line="6" selection-start-column="96" selection-end-line="6" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parser/ParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parser/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="36" column="68" lean-forward="false" selection-start-line="36" selection-start-column="68" selection-end-line="36" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parser/test_graph.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parser/stockholm_graph.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3025">
+          <caret line="121" column="7" lean-forward="false" selection-start-line="121" selection-start-column="7" selection-end-line="121" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>

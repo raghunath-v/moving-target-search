@@ -8,6 +8,9 @@ import main.NoPathFoundException;
 
 import java.util.List;
 
+/**
+ * interface for an algorithm that solves a simple path finding problem
+ */
 public interface SearchSolver {
 
     /**

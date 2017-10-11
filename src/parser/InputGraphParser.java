@@ -7,6 +7,9 @@ import graph.Node;
 import java.io.*;
 import java.util.*;
 
+/**
+ * static class that parses a text file to a graph object
+ */
 public class InputGraphParser {
 
     public static final String NODE_PREFIX = "node";

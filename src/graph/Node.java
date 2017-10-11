@@ -19,19 +19,19 @@ public class Node {
     private double rhs; //one step lookahead g value
     private double key; //the priority key for this node
 
+    /* variables needed to identify node */
     private String id; //string representation for this node
     private int index; //index of node in graph
 
-    //TODO: change to lat/long (x, y for test purpose)
-    private double x;
-    private double y;
+    private double lat; //latitude of this nodes location
+    private double longt; //longtitude of this nodes location
 
 
-    public Node(String id, double x, double y, int index) {
+    public Node(String id, double lat, double longt, int index) {
         edges = new HashSet<>();
         this.id = id;
-        this.x = x;
-        this.y = y;
+        this.lat = lat;
+        this.longt = longt;
         this.index = index;
     }
 
@@ -104,30 +104,16 @@ public class Node {
         return key;
     }
 
-    public double getX() {
-        return x;
+    public double getLat() {
+        return lat;
     }
 
-    public double getY() {
-        return y;
+    public double getLongt() {
+        return longt;
     }
 
     public String getId() {
         return id;
-    }
-    
-    public boolean isSame(Node compareNode)
-    {
-    	boolean flag=true;
-    	if (this.getX()!=compareNode.getX()) 
-    	{
-    		flag=false;
-    	}
-    	if (this.getX()!=compareNode.getY()) 
-    	{
-    		flag=false;
-    	}
-    	return flag;
     }
 
     public Edge getEdgeToParent() {

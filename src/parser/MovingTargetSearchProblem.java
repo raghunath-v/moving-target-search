@@ -3,6 +3,9 @@ package parser;
 import graph.Graph;
 import graph.Node;
 
+/**
+ * class that encapsulate all attributes of a problem instance of a moving target search problem
+ */
 public class MovingTargetSearchProblem {
     private Graph graph;
     private Node searchStart;

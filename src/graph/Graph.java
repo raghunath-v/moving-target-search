@@ -10,7 +10,7 @@ import java.util.Set;
 public class Graph {
     private Set<Node> nodes;
     private Set<Edge> edges;
-    private Map<Node, Map<Node, Double>> heuristic;
+    private Map<Node, Map<Node, Double>> heuristic; //this is used by search algorithms
 
     public Graph() {
         nodes = new HashSet<>();

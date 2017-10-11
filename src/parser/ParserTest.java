@@ -2,6 +2,9 @@ package parser;
 
 import graph.Graph;
 
+/**
+ * class that tests the parser class
+ */
 public class ParserTest {
     public static void main(String[] args) {
         String filePath = args[0];

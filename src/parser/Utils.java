@@ -7,7 +7,7 @@ import java.util.Random;
 public class Utils {
 
     public static double computeDistance(Node a, Node b) {
-        return computeDistance(a.getX(), a.getY(), b.getX(), b.getY());
+        return computeDistance(a.getLat(), a.getLongt(), b.getLat(), b.getLongt());
     }
 
     /**
