@@ -9,6 +9,9 @@ import main.NoPathFoundException;
 
 import java.util.List;
 
+/**
+ * class that implements a moving target search by initializing an A* search each time the target moves
+ */
 public class MultipleAStar implements MovingTargetSearchSolver {
 
     private AStar aStar;

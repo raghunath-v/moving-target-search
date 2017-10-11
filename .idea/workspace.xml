@@ -2,40 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba2b983f-4367-43d6-a110-fbae0e384a8a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/skeleton/Police.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/skeleton/Thief.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/MTDalgorithm/MTDStarTest.java" afterPath="$PROJECT_DIR$/src/MTDalgorithm/SearchAlgorithmTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/Aalgorithm/AStar$1.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/Aalgorithm/AStar$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/Aalgorithm/AStar.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/Aalgorithm/AStar.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/Aalgorithm/SearchSolver.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/Aalgorithm/SearchSolver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/MTDalgorithm/Logger.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/MTDalgorithm/Logger.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/MTDalgorithm/MTDStar$1.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/MTDalgorithm/MTDStar$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/MTDalgorithm/MTDStar.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/MTDalgorithm/MTDStar.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/MTDalgorithm/MTDStarTest.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/MTDalgorithm/MTDStarTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/MTDalgorithm/MovingTargetSearchSolver.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/MTDalgorithm/MovingTargetSearchSolver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/graph/Edge.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/graph/Edge.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/graph/Graph.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/graph/Graph.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/graph/Node.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/graph/Node.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/parser/InputGraphParser.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/parser/InputGraphParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/parser/MovingTargetSearchProblem.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/parser/MovingTargetSearchProblem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/parser/ParserTest.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/parser/ParserTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Moving Target Search/parser/Utils.class" afterPath="$PROJECT_DIR$/out/production/Moving Target Search/parser/Utils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Aalgorithm/AStar.java" afterPath="$PROJECT_DIR$/src/Aalgorithm/AStar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Aalgorithm/SearchSolver.java" afterPath="$PROJECT_DIR$/src/Aalgorithm/SearchSolver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MTDalgorithm/Logger.java" afterPath="$PROJECT_DIR$/src/MTDalgorithm/Logger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MTDalgorithm/MTDStar.java" afterPath="$PROJECT_DIR$/src/MTDalgorithm/MTDStar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/graph/Edge.java" afterPath="$PROJECT_DIR$/src/graph/Edge.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/graph/Graph.java" afterPath="$PROJECT_DIR$/src/graph/Graph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/graph/Node.java" afterPath="$PROJECT_DIR$/src/graph/Node.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/ExpandCounter.java" afterPath="$PROJECT_DIR$/src/main/ExpandCounter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Main.java" afterPath="$PROJECT_DIR$/src/main/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/InputGraphParser.java" afterPath="$PROJECT_DIR$/src/parser/InputGraphParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/MovingTargetSearchProblem.java" afterPath="$PROJECT_DIR$/src/parser/MovingTargetSearchProblem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/ParserTest.java" afterPath="$PROJECT_DIR$/src/parser/ParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/Utils.java" afterPath="$PROJECT_DIR$/src/parser/Utils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MTDalgorithm/MultipleAStar.java" afterPath="$PROJECT_DIR$/src/MTDalgorithm/MultipleAStar.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,11 +24,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stockholm_graph.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="stockholm_graph.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parser/stockholm_graph.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3025">
               <caret line="121" column="7" lean-forward="false" selection-start-line="121" selection-start-column="7" selection-end-line="121" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MultipleAStar.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MTDalgorithm/MultipleAStar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-63">
+              <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -107,6 +84,7 @@
         <option value="$PROJECT_DIR$/src/parser/InputGraphParser.java" />
         <option value="$PROJECT_DIR$/src/parser/MovingTargetSearchProblem.java" />
         <option value="$PROJECT_DIR$/src/parser/ParserTest.java" />
+        <option value="$PROJECT_DIR$/src/MTDalgorithm/MultipleAStar.java" />
       </list>
     </option>
   </component>
@@ -381,14 +359,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Aalgorithm/AStar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="84" column="14" lean-forward="false" selection-start-line="84" selection-start-column="14" selection-end-line="84" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/nio/file/Files.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
@@ -666,7 +636,7 @@
         <state relative-caret-position="6250">
           <caret line="256" column="8" lean-forward="false" selection-start-line="256" selection-start-column="8" selection-end-line="256" selection-end-column="8" />
           <folding>
-            <marker date="1507710844393" expanded="true" signature="8957:9091" ph="{...}" />
+            <marker date="1507711342347" expanded="true" signature="8957:9091" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -747,6 +717,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3025">
           <caret line="121" column="7" lean-forward="false" selection-start-line="121" selection-start-column="7" selection-end-line="121" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MTDalgorithm/MultipleAStar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-63">
+          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
           <folding />
         </state>
       </provider>
